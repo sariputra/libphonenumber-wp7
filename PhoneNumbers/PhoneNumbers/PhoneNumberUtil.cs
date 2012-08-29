@@ -15,6 +15,7 @@
  */
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -1368,8 +1369,7 @@ namespace PhoneNumbers
                 formattedNumber);
             if (internationalPrefixForFormatting.Length > 0)
             {
-                formattedNumber.Insert(0, " ").Insert(0, countryCallingCode).Insert(0, " ")
-                    .Insert(0, internationalPrefixForFormatting);
+                formattedNumber.Insert(0, " ").Insert(0, countryCallingCode.ToString()).Insert(0, " ").Insert(0, internationalPrefixForFormatting);
             }
             else
             {
@@ -1526,7 +1526,7 @@ namespace PhoneNumbers
                 formattedNumber);
             if (internationalPrefixForFormatting.Length > 0)
             {
-                formattedNumber.Insert(0, " ").Insert(0, countryCode).Insert(0, " ")
+                formattedNumber.Insert(0, " ").Insert(0, countryCode.ToString(CultureInfo.InvariantCulture)).Insert(0, " ")
                     .Insert(0, internationalPrefixForFormatting);
             }
             else
@@ -1561,13 +1561,13 @@ namespace PhoneNumbers
             switch (numberFormat)
             {
                 case PhoneNumberFormat.E164:
-                    formattedNumber.Insert(0, countryCallingCode).Insert(0, PLUS_SIGN);
+                    formattedNumber.Insert(0, countryCallingCode.ToString(CultureInfo.InvariantCulture)).Insert(0, PLUS_SIGN.ToString(CultureInfo.InvariantCulture));
                     return;
                 case PhoneNumberFormat.INTERNATIONAL:
-                    formattedNumber.Insert(0, " ").Insert(0, countryCallingCode).Insert(0, PLUS_SIGN);
+                    formattedNumber.Insert(0, " ").Insert(0, countryCallingCode.ToString(CultureInfo.InvariantCulture)).Insert(0, PLUS_SIGN.ToString(CultureInfo.InvariantCulture));
                     return;
                 case PhoneNumberFormat.RFC3966:
-                    formattedNumber.Insert(0, "-").Insert(0, countryCallingCode).Insert(0, PLUS_SIGN);
+                    formattedNumber.Insert(0, "-").Insert(0, countryCallingCode.ToString(CultureInfo.InvariantCulture)).Insert(0, PLUS_SIGN.ToString(CultureInfo.InvariantCulture));
                     return;
                 case PhoneNumberFormat.NATIONAL:
                 default:

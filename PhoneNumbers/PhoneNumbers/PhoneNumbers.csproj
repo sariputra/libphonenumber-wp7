@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A81E0D3B-ACB9-4BEF-8C5A-2D902778E9BA}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhoneNumbers</RootNamespace>
+    <AssemblyName>PhoneNumbers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AreaCodeMap.cs" />
+    <Compile Include="AreaCodeMapStorageStrategy.cs" />
+    <Compile Include="AreaCodeParser.cs" />
+    <Compile Include="AsYouTypeFormatter.cs" />
+    <Compile Include="CountryCodeToRegionCodeMap.cs" />
+    <Compile Include="DefaultMapStorage.cs" />
+    <Compile Include="FlyweightMapStorage.cs" />
+    <Compile Include="LocaleData.cs" />
+    <Compile Include="MappingFileProvider.cs" />
+    <Compile Include="NumberParseException.cs" />
+    <Compile Include="Phonemetadata.cs" />
+    <Compile Include="Phonenumber.cs" />
+    <Compile Include="PhoneNumberMatch.cs" />
+    <Compile Include="PhoneNumberMatcher.cs" />
+    <Compile Include="PhoneNumberOfflineGeocoder.cs" />
+    <Compile Include="PhoneNumberUtil.cs" />
+    <Compile Include="PhoneRegex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegexCache.cs" />
+    <Compile Include="RegionCode.cs" />
+    <Compile Include="ShortNumberUtil.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="XmlParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PhoneNumberMetaData.xml" />
+    <Content Include="PhoneNumberMetaDataForTesting.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="res\1_en" />
+    <None Include="res\20_en" />
+    <None Include="res\212_en" />
+    <None Include="res\212_fr" />
+    <None Include="res\213_en" />
+    <None Include="res\216_en" />
+    <None Include="res\220_en" />
+    <None Include="res\221_en" />
+    <None Include="res\222_en" />
+    <None Include="res\222_fr" />
+    <None Include="res\224_en" />
+    <None Include="res\225_en" />
+    <None Include="res\225_fr" />
+    <None Include="res\226_en" />
+    <None Include="res\228_en" />
+    <None Include="res\228_es" />
+    <None Include="res\228_fr" />
+    <None Include="res\229_en" />
+    <None Include="res\229_fr" />
+    <None Include="res\230_en" />
+    <None Include="res\230_es" />
+    <None Include="res\230_fr" />
+    <None Include="res\232_en" />
+    <None Include="res\233_en" />
+    <None Include="res\238_en" />
+    <None Include="res\238_pt" />
+    <None Include="res\239_en" />
+    <None Include="res\239_pt" />
+    <None Include="res\242_en" />
+    <None Include="res\242_fr" />
+    <None Include="res\243_en" />
+    <None Include="res\243_fr" />
+    <None Include="res\244_en" />
+    <None Include="res\244_pt" />
+    <None Include="res\245_en" />
+    <None Include="res\245_pt" />
+    <None Include="res\247_en" />
+    <None Include="res\249_en" />
+    <None Include="res\251_en" />
+    <None Include="res\252_en" />
+    <None Include="res\254_en" />
+    <None Include="res\256_en" />
+    <None Include="res\258_en" />
+    <None Include="res\258_pt" />
+    <None Include="res\260_en" />
+    <None Include="res\261_en" />
+    <None Include="res\263_en" />
+    <None Include="res\264_en" />
+    <None Include="res\266_en" />
+    <None Include="res\267_en" />
+    <None Include="res\268_en" />
+    <None Include="res\269_en" />
+    <None Include="res\269_fr" />
+    <None Include="res\27_en" />
+    <None Include="res\290_en" />
+    <None Include="res\290_fr" />
+    <None Include="res\299_en" />
+    <None Include="res\30_el" />
+    <None Include="res\30_en" />
+    <None Include="res\31_en" />
+    <None Include="res\31_nl" />
+    <None Include="res\33_en" />
+    <None Include="res\33_fr" />
+    <None Include="res\34_en" />
+    <None Include="res\34_es" />
+    <None Include="res\351_en" />
+    <None Include="res\351_pt" />
+    <None Include="res\352_de" />
+    <None Include="res\352_en" />
+    <None Include="res\354_en" />
+    <None Include="res\355_en" />
+    <None Include="res\358_en" />
+    <None Include="res\358_fi" />
+    <None Include="res\358_se" />
+    <None Include="res\36_en" />
+    <None Include="res\36_hu" />
+    <None Include="res\370_en" />
+    <None Include="res\371_en" />
+    <None Include="res\372_en" />
+    <None Include="res\373_en" />
+    <None Include="res\373_ro" />
+    <None Include="res\373_ru" />
+    <None Include="res\374_en" />
+    <None Include="res\381_en" />
+    <None Include="res\381_sr" />
+    <None Include="res\39_en" />
+    <None Include="res\39_it" />
+    <None Include="res\41_de" />
+    <None Include="res\41_en" />
+    <None Include="res\41_fr" />
+    <None Include="res\41_it" />
+    <None Include="res\420_en" />
+    <None Include="res\421_en" />
+    <None Include="res\43_de" />
+    <None Include="res\43_en" />
+    <None Include="res\44_en" />
+    <None Include="res\46_en" />
+    <None Include="res\46_sv" />
+    <None Include="res\48_en" />
+    <None Include="res\48_pl" />
+    <None Include="res\49_de" />
+    <None Include="res\49_en" />
+    <None Include="res\51_en" />
+    <None Include="res\53_en" />
+    <None Include="res\54_en" />
+    <None Include="res\54_es" />
+    <None Include="res\55_en" />
+    <None Include="res\55_pt" />
+    <None Include="res\56_en" />
+    <None Include="res\56_es" />
+    <None Include="res\58_en" />
+    <None Include="res\58_es" />
+    <None Include="res\7_en" />
+    <None Include="res\81_en" />
+    <None Include="res\81_ja" />
+    <None Include="res\82_en" />
+    <None Include="res\82_ko" />
+    <None Include="res\82_zh" />
+    <None Include="res\82_zh_Hant" />
+    <None Include="res\84_en" />
+    <None Include="res\84_vi" />
+    <None Include="res\86_en" />
+    <None Include="res\86_zh" />
+    <None Include="res\886_en" />
+    <None Include="res\886_zh" />
+    <None Include="res\886_zh_Hant" />
+    <None Include="res\90_en" />
+    <None Include="res\90_tr" />
+    <None Include="res\94_en" />
+    <None Include="res\test_1_de" />
+    <None Include="res\test_1_en" />
+    <None Include="res\test_82_en" />
+    <None Include="res\test_82_ko" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

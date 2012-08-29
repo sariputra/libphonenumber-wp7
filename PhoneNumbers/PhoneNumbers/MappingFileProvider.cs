@@ -69,7 +69,7 @@ namespace PhoneNumbers
             foreach (int countryCallingCode in availableDataFiles.Keys)
             {
                 countryCallingCodes[index++] = countryCallingCode;
-                availableLanguages.Add(new HashSet<String>(availableDataFiles[countryCallingCode]));
+                availableLanguages.Add(availableDataFiles[countryCallingCode]);
             }
         }
 

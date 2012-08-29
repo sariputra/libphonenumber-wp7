@@ -14,6 +14,23 @@ namespace Utilities
 {
     public class HashSet<T> : Dictionary<T,T>
     {
+        public void Add(T key)
+        {
+            base.Add(key, key);
+        }
 
+        public bool Contains(T key)
+        {
+            return base.ContainsKey(key);
+        }
+
+        public void UnionWith(List<T> value)
+        {
+            foreach (var VARIABLE in value)
+            {
+                if(!base.ContainsKey(VARIABLE))
+                    base.Add(VARIABLE,VARIABLE);
+            }
+        }
     }
 }

@@ -69,9 +69,8 @@ namespace PhoneNumbers
         public static PhoneMetadataCollection BuildPhoneMetadataCollection(Stream input, bool liteBuild)
         {
             BuildMetadataFromXml.LiteBuild = liteBuild;
-            var document = new XmlDocument();
-            document.Load(input);
-            document.Normalize();
+            var documentTemp = XElement.Load(input);
+            var document = new XmlElement(documentTemp);
             var metadataCollection = new PhoneMetadataCollection.Builder();
             foreach (XmlElement territory in document.GetElementsByTagName("territory"))
             {

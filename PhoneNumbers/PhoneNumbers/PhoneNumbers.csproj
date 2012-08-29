@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AreaCodeMap.cs" />
@@ -77,7 +78,12 @@
     <Content Include="PhoneNumberMetaData.xml" />
     <Content Include="PhoneNumberMetaDataForTesting.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{986ED405-45A6-48C2-A84F-278C67F19FB0}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="res\1_en" />
     <None Include="res\20_en" />
